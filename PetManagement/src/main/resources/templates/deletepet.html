@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: auto;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #ff0000;
+    }
+	.navbar {
+background-color: #ff0000;
+overflow: hidden;
+padding: 8px 16px;
+}
+
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background-color: #ff0000;
+}
+</style> -->
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff9e6;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #fefefe;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .navbar {
+        background-color: #FA9884;
+        overflow: hidden;
+        padding: 10px 16px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #3b3b3b;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .navbar a:hover {
+        background-color: #E74646;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: bold;
+        color: #3b3b3b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: auto;
+        background-color: #E74646;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #E74646;
+    }
+</style>
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="viewpet">View Pets</a>
+        <a href="addpet">Add Pets</a>
+        <a href="deletepet">Delete Pets</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="container">
+        <h1>Delete a pet</h1>
+        <form action="#" th:action="@{/deletepet}" th:object="${pet}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" th:field="*{name}" id="name" />
+            <input type="submit" value="Delete" />
+            <input type="reset" value="Reset" />
+        </form>
+    </div>
+</body>
+</html>

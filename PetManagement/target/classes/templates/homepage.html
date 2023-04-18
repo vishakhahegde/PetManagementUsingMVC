@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff9e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fefefe;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: #FA9884;
+            overflow: hidden;
+            padding: 10px 16px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #3b3b3b;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 20px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .navbar a:hover {
+            background-color: #E74646;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #3b3b3b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .animal-image {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 500px;
+            z-index: -1;
+            animation: moveAnimals 10s ease-in-out infinite;
+        }
+
+        @keyframes moveAnimals {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-50px, -50px); }
+            50% { transform: translate(-100px, 0); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .pet-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pet-info-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .pet-info-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pet-info-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .pet-info-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3b3b3b
+        }
+
+        .pet-info-item p {
+            font-size: 18px;
+            color: #6b6b6b;
+            margin-bottom: 10px;
+        }
+
+        .pet-info-item a {
+            display: inline-block;
+            background-color: #FA9884;
+            color: #3b3b3b;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .pet-info-item a:hover {
+            background-color: #3b3b3b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="viewpet">View Pets</a>
+        <a href="addpet">Add Pets</a>
+        <a href="deletepet">Delete Pets</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="container">
+        <h1>Pet Management System</h1>
+        <h1>PES1UG20CS506</h1>
+        <div class="pet-info">
+            <div class="pet-info-item">
+                <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Pet 1">
+                <h2>View All Pets</h2>
+                <p>List down all existing pets</p>
+                <a href="viewpet">View Pets</a>
+            </div>
+            <div class="pet-info-item">
+                <img src="https://images.unsplash.com/photo-1592754862816-1a21a4ea2281?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pet 2">
+                <h2>Add New Pet</h2>
+                <p>Register your pet here!</p>
+                <a href="addpet">Add Pets</a>
+            </div>
+            <div class="pet-info-item">
+                <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Pet 3">
+                <h2>Remove a Pet</h2>
+                <p>Remove pet details here.</p>
+                <a href="deletepet">Delete Pets</a>
+            </div>
+        </div>
+        <img src="https://i.pinimg.com/originals/bf/03/11/bf0311f6c5cf8cdab2456d56f6f09b6c.gif" alt="Animals" class="animal-image">
+    </div>
+</body>
+</html>
